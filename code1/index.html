@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Classic Snake</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="game-panel" aria-labelledby="snake-title">
+        <header class="panel-header">
+          <div>
+            <p class="eyebrow">Arcade</p>
+            <h1 id="snake-title">Classic Snake</h1>
+          </div>
+          <div class="stats" aria-label="Game stats">
+            <div class="stat-card">
+              <span class="stat-label">Score</span>
+              <strong id="score">0</strong>
+            </div>
+            <div class="stat-card">
+              <span class="stat-label">Best</span>
+              <strong id="best-score">0</strong>
+            </div>
+          </div>
+        </header>
+
+        <div class="toolbar">
+          <p id="status" class="status-text" aria-live="polite">Use arrow keys or WASD to move.</p>
+          <div class="actions">
+            <button id="pause-button" type="button">Pause</button>
+            <button id="restart-button" type="button">Restart</button>
+          </div>
+        </div>
+
+        <section class="board-frame">
+          <div
+            id="game-board"
+            class="game-board"
+            role="grid"
+            aria-label="Snake game board"
+          ></div>
+        </section>
+
+        <section class="controls-panel" aria-label="Touch controls">
+          <button class="control-button" type="button" data-direction="UP">Up</button>
+          <div class="controls-row">
+            <button class="control-button" type="button" data-direction="LEFT">Left</button>
+            <button class="control-button" type="button" data-direction="DOWN">Down</button>
+            <button class="control-button" type="button" data-direction="RIGHT">Right</button>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
